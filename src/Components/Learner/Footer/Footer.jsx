@@ -5,7 +5,7 @@ import FooterBtn from '../FooterBtn/FooterBtn';
 function Footer() {
   return (
     <>
-        <div className='flex flex-col xl:flex-row px-4 py-4 bg-gray-800 justify-center items-center md:items-start'>
+        <div className='flex flex-col xl:flex-row px-4 py-4 bg-gray-800 justify-center items-center md:items-start xl:p-16'>
             <div className='flex flex-col justify-center items-center md:my-4 md:mx-16'>
                 <div className='flex justify-center items-center'>
                     <a href='/'>
@@ -72,23 +72,23 @@ function Footer() {
                 <div className='flex m-2 bg-gray-700 p-4 hover:bg-orange-500'>
                     <img width="40" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/mac-os.png" alt="mac-os" />
                     <div className='flex flex-col mx-3 justify-center items-center'>
-                        <p className='text-gray-300 text-sm '>Download now</p>
-                        <p className='text-white font-inter text-lg'>App Store</p>
+                        <p className='text-gray-300 text-xs '>Download now</p>
+                        <p className='text-white font-inter text-sm'>App Store</p>
                     </div>
                 </div>
                 <div className='flex m-2 bg-gray-700 p-4 hover:bg-orange-500'>
                     <img width="40" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/google-play.png" alt="google-play" />
                     <div className='flex flex-col mx-3 justify-center items-center'>
-                        <p className='text-gray-300 text-sm'>Download now</p>
-                        <p className='text-white font-inter text-lg'>Play Store</p>
+                        <p className='text-gray-300 text-xs'>Download now</p>
+                        <p className='text-white font-inter text-sm'>Play Store</p>
                     </div>
                 </div>
             </div>
             <hr />
         </div>
         <div className='flex flex-col lg:flex-row justify-between items-center bg-gray-800 w-full border-t-2 border-white'>
-            <p className='text-white mx-64 p-4'>© 2021 Strom Product . All rights reserved</p>
-            <div className='flex justify-center items-center mx-64'>
+            <p className='text-white md:mx-64 p-4'>© 2021 Strom Product . All rights reserved</p>
+            <div className='flex justify-center items-center md:mx-64'>
                 <a href=''>
                     <img className='w-12 h-12 object-cover md:m-1 md:mx-4 md:w-14 md:h-14' src={image} alt='logo' />
                 </a>

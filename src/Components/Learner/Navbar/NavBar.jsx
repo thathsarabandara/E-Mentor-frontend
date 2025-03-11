@@ -6,7 +6,7 @@ function NavBar() {
   const [isAuth, setAuth] = useState(false);
   const [isNoti, setNoti] = useState(true);
   const [isProfile, setProfile] = useState('');
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   const [cartAmount, setCartAmount] = useState('2');
   return (
     <>
