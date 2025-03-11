@@ -18,32 +18,32 @@ function NavBar() {
             </button>
             <ul className={`md:flex md:space-x-6 space-y-4 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400">Home</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Home</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400">Courses</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Courses</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400">About</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">About</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400">Contact</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Contact</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400">Become an Instructor</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Become an Instructor</a>
               </li>
             </ul>
           </div>
           <div className='flex'>
             <select className='bg-transparent text-gray-400 cursor-pointer focus:outline-none focus:ring-0'>
-              <option className='bg-gray-800'>USD</option>
-              <option className='bg-gray-800'>RS.</option>
-              <option className='bg-gray-800'>Euro</option>
+              <option className='bg-gray-800 font-inter'>USD</option>
+              <option className='bg-gray-800 font-inter'>RS.</option>
+              <option className='bg-gray-800 font-inter'>Euro</option>
             </select>
             <select className='bg-transparent text-gray-400 cursor-pointer focus:outline-none focus:ring-0'>
-              <option className='bg-gray-800'>English</option>
-              <option className='bg-gray-800'>Sinhala</option>
-              <option className='bg-gray-800'>Tamil</option>
+              <option className='bg-gray-800 font-inter'>English</option>
+              <option className='bg-gray-800 font-inter'>Sinhala</option>
+              <option className='bg-gray-800 font-inter'>Tamil</option>
             </select>
           </div>
         </div>
@@ -57,7 +57,7 @@ function NavBar() {
                 <h2 className='text-orange-500 text-bold font-bold text-md md:text-xl'>E-Mentor</h2>
               </a>
             </div>
-            <select className='hidden bg-transparent border-2 w-44 h-10 mx-4 font-mono focus:outline-none focus:ring-0'>
+            <select className='hidden xl:block bg-transparent border-2 w-44 h-10 mx-4 font-inter focus:outline-none focus:ring-0'>
                 <option className=''>Browse</option>
                 <option className=''>Technology</option>
                 <option className=''>Business</option>
@@ -65,7 +65,7 @@ function NavBar() {
                 <option className=''>Marketing</option>
                 <option className=''>Design</option>
             </select>
-            <div className="hidden md:flex justify-center items-center mx-8">
+            <div className="hidden xl:flex justify-center items-center mx-8">
               <img
                 width="40"
                 height="40"
@@ -73,7 +73,7 @@ function NavBar() {
                 alt="search--v1"
               />
               <input
-                className="h-8 w-64 focus:ring-2 focus:ring-transparent focus:outline-none"
+                className="h-8 w-64 focus:ring-2 focus:ring-transparent focus:outline-none font-inter"
                 type="text"
                 placeholder="   Search Courses Here"
               />
@@ -92,7 +92,7 @@ function NavBar() {
               </a>
               <a href='' className='relative'>
                 <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shoping-cart--v1"/>
-                <div className="absolute top-0 right-0 md:right-0 bg-orange-500 w-2 h-2 md:w-3.5 md:h-3.5 rounded-full flex items-center justify-center md:text-white text-transparent md:text-xs">
+                <div className="absolute top-0 right-0 md:right-0 bg-orange-500 w-2 h-2 md:w-3.5 md:h-3.5 rounded-full flex items-center justify-center md:text-white text-transparent md:text-xs font-inter">
                   {cartAmount}
                 </div>
               </a>
@@ -108,10 +108,10 @@ function NavBar() {
             ):(
               <div className='flex justify-center items-center mx-3'>
                 <a href='/register'>
-                  <button className='w-20 h-8 md:w-36 md:h-10 bg-yellow-500 bg-opacity-20 text-yellow-600 px-2 md:px-5 m-1 text-center text-xs md:text-sm'> Create Account </button>
+                  <button className='w-20 h-8 md:w-36 md:h-10 bg-yellow-500 bg-opacity-20 text-yellow-600 px-2 md:px-5 m-1 text-center text-xs md:text-sm font-inter'> Create Account </button>
                 </a>
                 <a href='/login'>
-                  <button  className='w-15 h-8 md:w-28 md:h-10 bg-orange-500 text-white px-2  md:px-5 md:m-1 text-center text-xs md:text-sm'> Log in </button>
+                  <button  className='w-15 h-8 md:w-28 md:h-10 bg-orange-500 text-white px-2  md:px-5 md:m-1 text-center text-xs md:text-sm font-inter'> Log in </button>
                 </a>
               </div>
             )}
