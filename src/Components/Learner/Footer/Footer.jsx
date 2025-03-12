@@ -5,7 +5,7 @@ import FooterBtn from '../FooterBtn/FooterBtn';
 function Footer() {
   return (
     <>
-        <div className='flex flex-col xl:flex-row px-4 py-4 bg-gray-800 justify-center items-center md:items-start xl:p-16'>
+        <div className='flex flex-col xl:flex-row px-4 py-4 bg-gray-800 justify-center items-center xl:items-start xl:p-16'>
             <div className='flex flex-col justify-center items-center md:my-4 md:mx-16'>
                 <div className='flex justify-center items-center'>
                     <a href='/'>
@@ -47,7 +47,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className='flex flex-col mx-6 my-4 md:my-4 md:mx-16s'>
+            <div className='flex flex-col mx-6 my-4 md:my-4 md:mx-16'>
                 <h3 className='text-white font-inter text-sm mb-2 md:mb-4'>QUICK LINKS</h3>
                 <div className='flex flex-col md:mt-4'>
                     <FooterBtn name='About' link='' />
