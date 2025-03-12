@@ -82,9 +82,9 @@ function Login() {
     
 
   return (
-    <div className='flex justify-center items-center p-16 border-2'>
-        <div className='flex flex-col lg:flex-row justify-center items-center border-2 lg:m-4 rounded-xl sm:w-96 lg:w-8/12'>
-            <img className='hidden 2xl:block lg:w-[550px] lg:h-[550px] rounded-lg lg:mr-10 xl:mr-16' src={login} alt='login' />
+    <div className='flex justify-center items-center p-16 min-h-screen'>
+        <div className='flex flex-col xl:flex-row justify-center items-center border-2 rounded-xl'>
+            <img className='hidden md:block lg:w-[550px] lg:h-[550px] rounded-lg' src={login} alt='login' />
             <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-col justify-center items-center'>
                 <div className='flex justify-center items-center drop-shadow-lg'>
