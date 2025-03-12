@@ -8,7 +8,7 @@ function FeatureCourseCard({ course }) {
     return (
       <a href={`${course.courseLink}`} className=''>
         <div className='flex justify-center items-center transform transition duration-300 ease-in-out hover:scale-105'>
-          <div className='w-64 h-48 overflow-hidden object-cover'>
+          <div className='hidden md:block w-64 h-48 overflow-hidden object-cover'>
             <img src={course.image} alt='course' className='w-64 h-48 object-cover transform transition duration-300 ease-in-out hover:scale-110' />
           </div>
           <div className='flex flex-col justify-between items-start h-48 w-96 p-3 bg-white border-2 border-gray-300 hover:bg-orange-50'>
@@ -43,11 +43,11 @@ function FeatureCourseCard({ course }) {
                 <p className='text-sm text-bold mx-1 font-bold text-gray-500'>{course.students}</p>
                 <p className='text-sm mx-1 text-inter text-gray-500'>students</p>
               </div>
-              <div className='flex justify-center items-center mx-6'>
+              <div className='flex justify-center items-center mx-5'>
                 <MdOutlineSignalCellularAlt className='text-red-800' />
                 <p className='flex justify-center items-center text-xs mx-1 text-inter'>{course.level}</p>
               </div>
-              <div className='flex justify-center items-center mx-1 ml-2'>
+              <div className='flex justify-center items-center'>
                 <FiClock className='text-green-700' />
                 <p className='text-sm text-inter mx-1'>{course.duration}</p>
               </div>

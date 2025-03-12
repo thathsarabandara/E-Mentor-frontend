@@ -41,10 +41,10 @@ function CourseCard({course}) {
 
   return (
     <a href={course.link} className='hover:cursor-pointer'>
-        <div className='flex flex-col justify-center items-center drop-shadow-lg bg:white hover:bg-orange-50'>
-        <CourseImage src={course.image} alt='course' />
-        <CourseInfo category={course.category} price={course.price} title={course.title} color={course.color} />
-        <CourseStats rating={course.rating} students={course.students} />
+        <div className='flex flex-col justify-center items-center drop-shadow-lg bg:white hover:bg-orange-50 w-72'>
+          <CourseImage src={course.image} alt='course' />
+          <CourseInfo category={course.category} price={course.price} title={course.title} color={course.color} />
+          <CourseStats rating={course.rating} students={course.students} />
         </div>
     </a>
   )

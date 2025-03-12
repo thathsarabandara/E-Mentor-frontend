@@ -95,7 +95,7 @@ function Home() {
       </div>
 
       <div className='flex flex-col justify-center items-center my-4 bg-gray-50 pb-16'>
-        <p className='font-bold text-4xl text-center my-4 mb-8'>Best selling courses</p>
+        <p className='font-bold text-2xl md:text-4xl text-center my-4 mb-8'>Best selling courses</p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'>
           {courses.map(course => (
             <CourseCard key={course.id} course={course} />
@@ -105,15 +105,24 @@ function Home() {
 
       <div className='border-2 border-gray-300'>
         <div className='flex flex-col justify-center items-center px-4 py-12'>
-          <div className='flex justify-between items-center w-8/12 mb-10'>
-            <p className='text-5xl font-bold'>Our feature courses</p>
-            <p className=''>Students Wise Choice</p>
+          <div className='flex flex-col md:flex-row justify-between items-center w-8/12 mb-10'>
+            <p className='text-2xl xl:text-4xl font-bold text-center font-inter'>Our feature courses</p>
+            <p className='text-sm font-bold text-center text-gray-500 font-inter'>Students Wise Choice</p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
           {featureCourses.map((course) => (
             <FeatureCourseCard key={course.id} course={course} />
           ))}
           </div>
+        </div>
+      </div>
+      
+      <div className='flex flex-col justify-center items-center my-4 bg-gray-50 pb-16'>
+        <p className='font-bold text-2xl md:text-4xl text-center my-4 mb-8'>Best selling courses</p>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6'>
+          {courses.map(course => (
+            <CourseCard key={course.id} course={course} />
+          ))}
         </div>
       </div>
     </>
