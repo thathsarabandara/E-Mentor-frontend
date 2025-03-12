@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import image from '../../../assets/images/logo.png';
 
 function OTP() {
     const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -75,6 +76,14 @@ function OTP() {
         <div className='flex justify-center items-center min-h-screen bg-gray-100'>
             <div className='border-2 border-orange-500 bg-white rounded-lg py-16 px-8 shadow-lg'>
                 <div className='flex flex-col justify-center items-center p-4'>
+                    <div className='flex justify-center items-center drop-shadow-lg'>
+                        <a href=''>
+                            <img className='w-12 h-12 object-cover md:m-1 md:mx-4 md:w-20 md:h-20' src={image} alt='logo' />
+                        </a>
+                        <a href=''>
+                            <h2 className='text-orange-500 text-bold font-bold text-md md:text-xl'>E-Mentor</h2>
+                        </a>
+                    </div>
                     <h1 className='text-black font-bold text-2xl mb-2'>OTP Verification</h1>
                     <p className='text-sm text-gray-500 mb-4'>Enter the OTP sent to your email</p>
 

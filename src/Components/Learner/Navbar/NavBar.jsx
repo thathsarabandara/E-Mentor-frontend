@@ -18,19 +18,19 @@ function NavBar() {
             </button>
             <ul className={`md:flex md:space-x-6 space-y-4 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Home</a>
+                <a href="/" className="text-gray-400 hover:text-orange-400 font-inter">Home</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Courses</a>
+                <a href="/courses" className="text-gray-400 hover:text-orange-400 font-inter">Courses</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">About</a>
+                <a href="/about" className="text-gray-400 hover:text-orange-400 font-inter">About</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Contact</a>
+                <a href="/contact" className="text-gray-400 hover:text-orange-400 font-inter">Contact</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-orange-400 font-inter">Become an Instructor</a>
+                <a href="/beaninstructor" className="text-gray-400 hover:text-orange-400 font-inter">Become an Instructor</a>
               </li>
             </ul>
           </div>
