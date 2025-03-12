@@ -31,6 +31,7 @@ import CourseCard from '../../../Components/Learner/CourseCard/CourseCard';
 import FeatureCourseCard from '../../../Components/Learner/FeatureCourseCard/FeatureCourseCard';
 import { FaArrowRight } from 'react-icons/fa';
 import InstructorCard from '../../../Components/Learner/InstructorCard/InstructorCard';
+import NewLearnerFooter from '../../../Components/Learner/NewLearnerFooter/NewLearnerFooter';
 
 function Home() {
   const categories = [
@@ -269,6 +270,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <NewLearnerFooter />
     </>
   );
 }
