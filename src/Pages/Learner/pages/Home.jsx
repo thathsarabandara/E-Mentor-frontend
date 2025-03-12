@@ -10,9 +10,11 @@ import course7 from '../../../assets/images/best_selling_courses/course7.png';
 import course8 from '../../../assets/images/best_selling_courses/course8.png';
 import course9 from '../../../assets/images/best_selling_courses/course9.png';
 import course10 from '../../../assets/images/best_selling_courses/course10.png';
+import instructor from '../../../assets/images/instructor/instructor1.png';
 import CategoryCard from '../../../Components/Learner/CategoryCard/CategoryCard';
 import { FiBook, FiCamera, FiCloud, FiCode, FiCpu, FiDatabase, FiGlobe, FiMonitor, FiMusic, FiServer, FiSmartphone, FiTool } from 'react-icons/fi';
 import CourseCard from '../../../Components/Learner/CourseCard/CourseCard';
+import FeatureCourseCard from '../../../Components/Learner/FeatureCourseCard/FeatureCourseCard';
 
 function Home() {
   const categories = [
@@ -41,6 +43,13 @@ function Home() {
     { id: 8, image: course8, color: 'blue', category: 'Health & Fitness', price: '$35', title: 'Yoga for Beginners: A Complete Guide', rating: '4.7', students: '125.4K', link: '/course/8' },
     { id: 9, image: course9, color: 'blue', category: 'Personal Development', price: '$42', title: 'Time Management & Productivity: Get More Done', rating: '4.8', students: '112.6K', link: '/course/9' },
     { id: 10, image: course10, color: 'blue', category: 'Music', price: '$48', title: 'Piano Lessons for Beginners - Learn to Play Piano', rating: '4.9', students: '153.8K', link: '/course/10' }
+  ];
+
+  const featureCourses = [
+    { id: 1, image: course1, title: 'Investing In Stocks The Complete Course!', category: 'Health & Fitness', color: 'green', price: 14, oldPrice: 26, instructor: instructor, instructorName: 'Kevin Gilbert', instructorLink: '#', courseLink: '#', rating: 5.0, students: '256.7K', level: 'Beginner', duration: '6 hours' },
+    { id: 2, image: course2, title: 'Mastering Web Development with React.js', category: 'Web Development', color: 'blue', price: 18, oldPrice: 35, instructor: instructor, instructorName: 'Sarah Johnson', instructorLink: '#', courseLink: '#', rating: 4.8, students: '189.2K', level: 'Intermediate', duration: '12 hours' },
+    { id: 3, image: course3, title: 'AI & Machine Learning Bootcamp', category: 'Artificial Intelligence', color: 'purple', price: 22, oldPrice: 45, instructor: instructor, instructorName: 'Michael Brown', instructorLink: '#', courseLink: '#', rating: 4.9, students: '322.5K', level: 'Advanced', duration: '10 hours' },
+    { id: 4, image: course4, title: 'Cybersecurity Fundamentals', category: 'Cybersecurity', color: 'red', price: 16, oldPrice: 30, instructor: instructor, instructorName: 'Emma Williams', instructorLink: '#', courseLink: '#', rating: 4.7, students: '278.3K', level: 'Beginner', duration: '8 hours' },
   ];
 
   return (
@@ -91,6 +100,20 @@ function Home() {
           {courses.map(course => (
             <CourseCard key={course.id} course={course} />
           ))}
+        </div>
+      </div>
+
+      <div className='border-2 border-gray-300'>
+        <div className='flex flex-col justify-center items-center px-4 py-12'>
+          <div className='flex justify-between items-center w-8/12 mb-10'>
+            <p className='text-5xl font-bold'>Our feature courses</p>
+            <p className=''>Students Wise Choice</p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          {featureCourses.map((course) => (
+            <FeatureCourseCard key={course.id} course={course} />
+          ))}
+          </div>
         </div>
       </div>
     </>
