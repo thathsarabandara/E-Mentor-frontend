@@ -85,7 +85,7 @@ function Login() {
     <div className='flex justify-center items-center p-16 min-h-screen'>
         <div className='flex flex-col xl:flex-row justify-center items-center border-2 rounded-xl'>
             <img className='hidden md:block lg:w-[550px] lg:h-[550px] rounded-lg' src={login} alt='login' />
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center m-6'>
                 <div className='flex flex-col justify-center items-center'>
                 <div className='flex justify-center items-center drop-shadow-lg'>
                         <a href=''>
