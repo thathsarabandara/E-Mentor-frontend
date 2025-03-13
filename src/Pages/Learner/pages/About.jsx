@@ -20,7 +20,6 @@ import galleryImage3 from '../../../assets/images/gallery/image3.jpeg'
 import galleryImage4 from '../../../assets/images/gallery/image4.jpeg'
 import galleryImage5 from '../../../assets/images/gallery/image5.jpeg'
 import galleryImage6 from '../../../assets/images/gallery/image6.jpeg'
-import galleryImage7 from '../../../assets/images/gallery/image7.jpeg'
 import Review from '../../../Components/Learner/Reviews/Review'
 
 function About() {

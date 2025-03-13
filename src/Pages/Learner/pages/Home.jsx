@@ -151,11 +151,11 @@ function Home() {
         </div>
       </div>
       
-    <div className='flex flex-col justify-center items-center bg-gray-50 pb-16'>
-      <p className='font-bold text-2xl md:text-4xl text-center my-4 mb-8'>Recently added courses</p>
+      <div className='flex flex-col justify-center items-center bg-gray-50 pb-16'>
+        <p className='font-bold text-2xl md:text-4xl text-center my-4 mb-8'>Recently added courses</p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6'>
           {recentCourses.map(course => (
-            <CourseCard key={course.id} course={course} />
+              <CourseCard key={course.id} course={course} />
           ))}
         </div>
         <a href='/courses' className='p-4 bg-orange-100 rounder-sm px-6 mt-4 font-bold font-inter text-gray-500 hover:bg-orange-500 hover:text-white'>
