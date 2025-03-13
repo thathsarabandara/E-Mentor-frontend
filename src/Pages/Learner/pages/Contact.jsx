@@ -9,7 +9,6 @@ import LocationCard from '../../../Components/Learner/LocationCard/LocationCard'
 import Input from '../../../Components/Learner/auth-input/Input'
 import { IoSend } from 'react-icons/io5'
 import { ImSpinner } from 'react-icons/im'
-import MapboxComponent from '../../../Components/Learner/Map/MapBoxComponent'
 
 function Contact() {
   const [firstName , setFirstName] = useState("");
@@ -266,7 +265,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <MapboxComponent />
+
     </>
   )
 }
