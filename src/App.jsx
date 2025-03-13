@@ -11,6 +11,7 @@ import Courses from './Pages/Learner/pages/Courses'
 import About from './Pages/Learner/pages/About'
 import Contact from './Pages/Learner/pages/Contact'
 import Instructor from './Pages/Learner/pages/Instructor'
+import Career from './Pages/Learner/pages/Career'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         <Route path='/courses' element={<Courses />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/career' element={<Career />} />
         <Route path='/beaninstructor' element={<Instructor />} />
       </Routes>
     <Footer />

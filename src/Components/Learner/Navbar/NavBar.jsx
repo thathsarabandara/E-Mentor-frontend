@@ -30,6 +30,9 @@ function NavBar() {
                 <a href="/contact" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Contact</a>
               </li>
               <li>
+                <a href="/career" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Career</a>
+              </li>
+              <li>
                 <a href="/beaninstructor" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Become an Instructor</a>
               </li>
             </ul>
