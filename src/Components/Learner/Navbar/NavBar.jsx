@@ -26,7 +26,7 @@ function NavBar() {
             </button>
             <ul className={`md:flex md:space-x-6 space-y-4 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
               <li>
-                <a href="/" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Home</a>
+                <a href="/learner" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Home</a>
               </li>
               <li>
                 <a href="/courses" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Courses</a>
@@ -93,7 +93,7 @@ function NavBar() {
                   <div className='absolute top-0 right-1 md:right-1 bg-orange-500 w-1.5 h-1.5 rounded-full'></div>
                 ) }
               </a>
-              <a href='/wishlist'className='mr-1' >
+              <a href='/learner/wishlist'className='mr-1' >
                 <FaRegHeart className='text-xl' />
               </a>
               <a href='/cart' className='relative'>
