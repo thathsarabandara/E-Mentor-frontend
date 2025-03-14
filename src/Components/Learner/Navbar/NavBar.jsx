@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import { Menu, X } from "lucide-react";
 import image from '../../../assets/images/logo.png'
+import emptyProfile from '../../../assets/images/navbar/emptyProfile.png'
+import notification from '../../../assets/images/navbar/notification.png'
+import search from '../../../assets/images/navbar/search.png'
+import shoppingCart from '../../../assets/images/navbar/shoppingCart.png'
+import wishlist from '../../../assets/images/navbar/wishlist.png'
+import { IoNotificationsOutline, IoSearchOutline } from 'react-icons/io5';
+import { FaRegHeart } from 'react-icons/fa';
+import { HiOutlineShoppingCart } from 'react-icons/hi';
 
 function NavBar() {
   const [isAuth, setAuth] = useState(false);
@@ -69,12 +77,7 @@ function NavBar() {
                 <option className=''>Design</option>
             </select>
             <div className="hidden xl:flex justify-center items-center mx-8">
-              <img
-                width="40"
-                height="40"
-                src="https://img.icons8.com/fluency-systems-regular/48/search--v1.png"
-                alt="search--v1"
-              />
+              <IoSearchOutline className='text-xl mr-2'/>
               <input
                 className="h-8 w-64 focus:ring-2 focus:ring-transparent focus:outline-none font-inter"
                 type="text"
@@ -84,17 +87,17 @@ function NavBar() {
           </div>
           <div className='flex justify-start items-center drop-shadow-xl'>
             <div className='flex justify-center items-center'>
-              <a href='/notification' className='relative' >
-                <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/appointment-reminders--v1.png" alt="appointment-reminders--v1"/>
+              <a href='/notification' className='relative mr-1' >
+                <IoNotificationsOutline className='text-xl' />
                 {isNoti && (
-                  <div className='absolute top-0 right-1 md:right-2 bg-orange-500 w-1.5 h-1.5 rounded-full'></div>
+                  <div className='absolute top-0 right-1 md:right-1 bg-orange-500 w-1.5 h-1.5 rounded-full'></div>
                 ) }
               </a>
-              <a href='/wishlist' >
-                <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/like--v1.png" alt="whishlist--v1"/> 
+              <a href='/wishlist'className='mr-1' >
+                <FaRegHeart className='text-xl' />
               </a>
               <a href='/cart' className='relative'>
-                <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shoping-cart--v1"/>
+                <HiOutlineShoppingCart className='text-xl' />
                 <div className="absolute top-0 right-0 md:right-0 bg-orange-500 w-2 h-2 md:w-3.5 md:h-3.5 rounded-full flex items-center justify-center md:text-white text-transparent md:text-xs font-inter">
                   {cartAmount}
                 </div>
