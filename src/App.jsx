@@ -12,6 +12,8 @@ import About from './Pages/Learner/pages/About'
 import Contact from './Pages/Learner/pages/Contact'
 import Instructor from './Pages/Learner/pages/Instructor'
 import Career from './Pages/Learner/pages/Career'
+import Cart from './Pages/Learner/pages/Cart'
+import Wishlist from './Pages/Learner/pages/Wishlist'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +31,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/career' element={<Career />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/beaninstructor' element={<Instructor />} />
       </Routes>
     <Footer />
