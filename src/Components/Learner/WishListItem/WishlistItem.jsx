@@ -1,11 +1,11 @@
-import React from 'react';
-import { FaStar } from 'react-icons/fa6';
-import { IoIosCloseCircleOutline } from 'react-icons/io';
+import React from 'react'
+import { FaStar } from 'react-icons/fa6'
+import { IoIosCloseCircleOutline } from 'react-icons/io'
 
-function CartItem({item}) {
+function WishlistItem({item}) {
   return (
     <>
-      <div className='flex flex-col justify-center items-center border-2 font-inter w-full'>
+    <div className='flex flex-col justify-center items-center border-2 font-inter w-full'>
         <div className='flex flex-col sm:flex-row justify-center items-center py-3 px-5 w-full'>
           <button className='self-start sm:self-center'>
             <IoIosCloseCircleOutline className='mr-2 text-lg' />
@@ -34,13 +34,13 @@ function CartItem({item}) {
               <p>{item.price}</p>
             </div>
             <div className='text-xs xl:text-sm'>
-              <a href='' className='text-orange-500 hover:text-black'>Move to Wishlist</a>
+              <a href='' className='text-orange-500 hover:text-black'>Move to Cart</a>
             </div>
           </div>
         </div>
-      </div>
+    </div>
     </>
-  );
+  )
 }
 
-export default CartItem;
+export default WishlistItem
