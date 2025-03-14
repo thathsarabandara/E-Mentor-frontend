@@ -20,6 +20,7 @@ import union3 from '../../../assets/images/career/union3.jpeg'
 import { VscVerified, VscVerifiedFilled } from 'react-icons/vsc'
 import { FaMoneyBillWave, FaClock, FaHeartbeat, FaGraduationCap, FaHome, FaPlane, FaUsers, FaChartLine } from 'react-icons/fa';
 import PerksCard from '../../../Components/Learner/PerksCard/PerksCard'
+import JobCard from '../../../Components/Learner/JobCard/JobCard'
 
 function Career() {
     const perksData = [
@@ -31,6 +32,30 @@ function Career() {
         { name: 'Paid Vacation', color: 'pink', icon: FaPlane },
         { name: 'Team Collaboration', color: 'gray', icon: FaUsers },
         { name: 'Career Growth', color: 'indigo', icon: FaChartLine },
+      ];
+      
+      const jobsData = [
+        {
+          name: 'Software Engineer',
+          location: 'San Francisco, CA',
+          type: 'Full-Time',
+          noofvacancy: '3 Vacancies',
+          deadline: 'April 30, 2025',
+        },
+        {
+          name: 'UI/UX Designer',
+          location: 'New York, NY',
+          type: 'Remote',
+          noofvacancy: '2 Vacancies',
+          deadline: 'March 25, 2025',
+        },
+        {
+          name: 'Project Manager',
+          location: 'Seattle, WA',
+          type: 'Hybrid',
+          noofvacancy: '1 Vacancy',
+          deadline: 'May 10, 2025',
+        },
       ];
       
   return (
@@ -199,6 +224,16 @@ function Career() {
           </div>
         </div>
       </div>
+
+      <div className='flex flex-col justify-center items-center bg-gray-100 pb-16'>
+        <p className='font-bold text-2xl md:text-3xl text-center my-4 mb-8'>Our all open positions</p>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6'>
+        {jobsData.map((job, index) => (
+            <JobCard key={index} job={job} />
+        ))}
+        </div>
+      </div>
+
     </>
   )
 }

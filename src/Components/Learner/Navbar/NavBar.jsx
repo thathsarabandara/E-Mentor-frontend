@@ -84,16 +84,16 @@ function NavBar() {
           </div>
           <div className='flex justify-start items-center drop-shadow-xl'>
             <div className='flex justify-center items-center'>
-              <a href='' className='relative' >
+              <a href='/notification' className='relative' >
                 <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/appointment-reminders--v1.png" alt="appointment-reminders--v1"/>
                 {isNoti && (
                   <div className='absolute top-0 right-1 md:right-2 bg-orange-500 w-1.5 h-1.5 rounded-full'></div>
                 ) }
               </a>
-              <a href='' >
+              <a href='/wishlist' >
                 <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/like--v1.png" alt="whishlist--v1"/> 
               </a>
-              <a href='' className='relative'>
+              <a href='/cart' className='relative'>
                 <img className='mx-1 w-4 h-4 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5' src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shoping-cart--v1"/>
                 <div className="absolute top-0 right-0 md:right-0 bg-orange-500 w-2 h-2 md:w-3.5 md:h-3.5 rounded-full flex items-center justify-center md:text-white text-transparent md:text-xs font-inter">
                   {cartAmount}
