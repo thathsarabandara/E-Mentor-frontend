@@ -1,8 +1,8 @@
 import React from 'react'
-import image1 from '../../../assets/images/best_selling_courses/course1.png';
-import image2 from '../../../assets/images/best_selling_courses/course2.png';
-import image3 from '../../../assets/images/best_selling_courses/course3.png';
-import WishlistItem from '../../../Components/Learner/WishListItem/WishlistItem'
+import image1 from '../../../../assets/images/best_selling_courses/course1.png';
+import image2 from '../../../../assets/images/best_selling_courses/course2.png';
+import image3 from '../../../../assets/images/best_selling_courses/course3.png';
+import WishlistItem from '../../../../Components/Learner/WishListItem/WishlistItem'
 
 function Wishlist() {
   const wishlistItem = [
@@ -44,7 +44,7 @@ function Wishlist() {
           </p>
         </div>
         <div className='flex justify-center items-center'>
-          <a className='font-inter text-xs text-gray-600 hover:text-black mx-2' href='/' >
+          <a className='font-inter text-xs text-gray-600 hover:text-black mx-2' href='/learner/dashboard' >
             Home
           </a>
           <p className='font-inter font-bold mx-2'>
@@ -58,7 +58,7 @@ function Wishlist() {
 
       <div className='flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-center items-start w-11/12 font-inter py-12'>
-          <p className='text-2xl mb-5'>Wishlist Items (3)</p>
+          <p className='text-2xl mb-5'>Wishlist (3)</p>
           <div className='flex flex-col xl:flex-row justify-center items-center xl:items-start w-full'>
             <div className='flex flex-col justify-center items-start w-full xl:w-8/12 xl:mr-16 mb-16'>
               <div className='flex justify-between w-full text-gray-500 text-sm border-t-2 border-b-2 py-2 px-4'>

@@ -19,14 +19,14 @@ function NavBar() {
   return (
     <>
       <div className='flex-col drop-shadow-md'>
-        <div className='flex justify-between px-4 py-4 bg-gray-800'>
+        <div className='flex justify-between px-4 py-4 bg-gray-800 text-sm'>
           <div className='flex justify-center items-center'>
             <button className='md:hidden' onClick={() =>setOpen(!setOpen)}>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             <ul className={`md:flex md:space-x-6 space-y-4 md:space-y-0 absolute md:static top-16 left-0 w-full bg-gray-900 md:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
               <li>
-                <a href="/" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Home</a>
+                <a href="/learner" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Home</a>
               </li>
               <li>
                 <a href="/courses" className="text-gray-400 hover:text-orange-400 font-inter hover:border-t-2 border-orange-500 py-4 active:border-t-2">Courses</a>
@@ -45,7 +45,7 @@ function NavBar() {
               </li>
             </ul>
           </div>
-          <div className='flex'>
+          <div className='flex text-xs'>
             <select className='bg-transparent text-gray-400 cursor-pointer focus:outline-none focus:ring-0'>
               <option className='bg-gray-800 font-inter'>USD</option>
               <option className='bg-gray-800 font-inter'>RS.</option>
@@ -68,7 +68,7 @@ function NavBar() {
                 <h2 className='text-orange-500 text-bold font-bold text-md md:text-xl'>E-Mentor</h2>
               </a>
             </div>
-            <select className='hidden xl:block bg-transparent border-2 w-44 h-10 mx-4 font-inter focus:outline-none focus:ring-0'>
+            <select className='hidden text-xs xl:block bg-transparent border-2 w-44 h-10 mx-4 font-inter focus:outline-none focus:ring-0'>
                 <option className=''>Browse</option>
                 <option className=''>Technology</option>
                 <option className=''>Business</option>
@@ -93,7 +93,7 @@ function NavBar() {
                   <div className='absolute top-0 right-1 md:right-1 bg-orange-500 w-1.5 h-1.5 rounded-full'></div>
                 ) }
               </a>
-              <a href='/wishlist'className='mr-1' >
+              <a href='/learner/wishlist'className='mr-1' >
                 <FaRegHeart className='text-xl' />
               </a>
               <a href='/cart' className='relative'>
