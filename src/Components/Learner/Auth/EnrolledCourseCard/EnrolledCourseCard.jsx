@@ -16,7 +16,7 @@ function EnrolledCourseCard({ image, title, lecture }) {
         <hr className='w-full my-3' />
         <a
           href="#"
-          className="mb-3 text-orange-600 font-medium hover:underline py-2 text-center bg-orange-100"
+          className="mb-3 text-orange-500 font-medium hover:text-orange-700 py-2 text-center bg-orange-100"
         >
           Watch Lecture
         </a>

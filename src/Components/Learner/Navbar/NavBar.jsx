@@ -19,7 +19,7 @@ function NavBar() {
   return (
     <>
       <div className='flex-col drop-shadow-md'>
-        <div className='flex justify-between px-4 py-4 bg-gray-800'>
+        <div className='flex justify-between px-4 py-4 bg-gray-800 text-sm'>
           <div className='flex justify-center items-center'>
             <button className='md:hidden' onClick={() =>setOpen(!setOpen)}>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -45,7 +45,7 @@ function NavBar() {
               </li>
             </ul>
           </div>
-          <div className='flex'>
+          <div className='flex text-xs'>
             <select className='bg-transparent text-gray-400 cursor-pointer focus:outline-none focus:ring-0'>
               <option className='bg-gray-800 font-inter'>USD</option>
               <option className='bg-gray-800 font-inter'>RS.</option>
@@ -68,7 +68,7 @@ function NavBar() {
                 <h2 className='text-orange-500 text-bold font-bold text-md md:text-xl'>E-Mentor</h2>
               </a>
             </div>
-            <select className='hidden xl:block bg-transparent border-2 w-44 h-10 mx-4 font-inter focus:outline-none focus:ring-0'>
+            <select className='hidden text-xs xl:block bg-transparent border-2 w-44 h-10 mx-4 font-inter focus:outline-none focus:ring-0'>
                 <option className=''>Browse</option>
                 <option className=''>Technology</option>
                 <option className=''>Business</option>

@@ -6,8 +6,6 @@ import course1 from '../../../../assets/images/best_selling_courses/course1.png'
 import course2 from '../../../../assets/images/best_selling_courses/course2.png'
 import course3 from '../../../../assets/images/best_selling_courses/course3.png'
 import course4 from '../../../../assets/images/best_selling_courses/course4.png'
-import course5 from '../../../../assets/images/best_selling_courses/course5.png'
-import course6 from '../../../../assets/images/best_selling_courses/course6.png'
 
 function DashBoard() {
 
@@ -16,8 +14,6 @@ function DashBoard() {
     { image: course2 , title: 'Holistic Nutrition', lecture: '2. Food as Medicine' },
     { image: course3 , title: 'Sound Therapy for Beginners', lecture: '1. Vibrational Healing' },
     { image: course4 , title: 'Essential Oils & Aromatherapy', lecture: '2. Healing Scents' },
-    { image: course5 , title: 'Mindfulness Meditation', lecture: '1. Awareness Practice' },
-    { image: course6 , title: 'The Art of Zen', lecture: '2. Living in the Moment' },
   ];
 
   const dashboardItems = [
@@ -29,13 +25,13 @@ function DashBoard() {
 
   return (
     <div className='flex justify-center items-center font-inter'>
-      <div className='w-8/12'>
+      <div className='w-full sm:w-10/12 lg:w-8/12'> 
 
         <div className='flex flex-col justify-center items-center lg:items-start mb-5'>
-          <p className='text-lg font-bold'>
+          <p className='text-lg sm:text-xl font-bold'>
             Dashboard
           </p>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-12 lg:gap-2 lg:gap-8 xl:gap-16 2xl:gap-20 pt-6'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-8 xl:gap-12 pt-6'> {/* Adjusted gaps */}
             {dashboardItems.map((item, index) => (
               <DashboardCard key={index} {...item} />
             ))}
@@ -43,10 +39,10 @@ function DashBoard() {
         </div>
 
         <div className='flex flex-col justify-center items-center lg:items-start mb-5'>
-          <p className='text-lg font-bold'>
-          Let’s start learning, Kevin
+          <p className='text-lg sm:text-xl font-bold'>
+            Let’s start learning, Kevin
           </p>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-6'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 pt-6'> {/* Updated grid layout */}
             {coursesData.map((course, idx) => (
               <EnrolledCourseCard key={idx} {...course} />
             ))}
@@ -58,4 +54,4 @@ function DashBoard() {
   )
 }
 
-export default DashBoard
+export default DashBoard;
