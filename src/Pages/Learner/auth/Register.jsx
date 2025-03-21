@@ -144,7 +144,7 @@ function Register() {
   return (
     <div className='flex justify-center items-center min-h-screen'>
         <div className='flex flex-col xl:flex-row justify-center items-center border-2'>
-            <img className='hidden md:block w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px] rounded-lg ' src={register} alt='login' />
+            <img className='hidden md:block w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[730px] object-cover rounded-lg ' src={register} alt='login' />
             <div className='flex flex-col justify-center items-center mx-8'>
                 <div className='flex flex-col justify-center items-center'>
                   <div className='flex justify-center items-center drop-shadow-lg'>

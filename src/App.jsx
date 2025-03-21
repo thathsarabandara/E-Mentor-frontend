@@ -38,7 +38,7 @@ function App() {
         <Route path="/beaninstructor" element={<Instructor />} />
 
         <Route path="/learner" element={<Home />}>
-          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="" element={<DashBoard />} />
           <Route path="courses" element={<AuthCourses />} />
           <Route path="teacher" element={<Teacher />} />
           <Route path="message" element={<Message />} />
