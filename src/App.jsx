@@ -19,6 +19,7 @@ import Teacher from './Pages/Learner/pages/Auth/Teacher';
 import Message from './Pages/Learner/pages/Auth/Message';
 import PurchaseHistory from './Pages/Learner/pages/Auth/PurchaseHistory';
 import Settings from './Pages/Learner/pages/Auth/Settings';
+import CourseView from './Pages/Learner/pages/CourseView';
 
 function App() {
   return (
@@ -36,9 +37,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/beaninstructor" element={<Instructor />} />
+        <Route path="/course/view" element={<CourseView />} />
 
         <Route path="/learner" element={<Home />}>
-          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="" element={<DashBoard />} />
           <Route path="courses" element={<AuthCourses />} />
           <Route path="teacher" element={<Teacher />} />
           <Route path="message" element={<Message />} />
