@@ -17,6 +17,7 @@ import { CgDollar } from 'react-icons/cg'
 import { VscMail } from 'react-icons/vsc'
 import { FaRightLong } from 'react-icons/fa6'
 import CourseSubSectionDropdown from '../../../Components/Learner/CourseSubSectionDropdown/CourseSubSectionDropdown'
+import CourseViewInstructorCard from '../../../Components/Learner/CourseViewInstructorCard/CourseViewInstructorCard'
 
 function CourseView() {
   return (
@@ -282,42 +283,10 @@ function CourseView() {
                     <div className='flex flex-col justify-start items-start w-full mt-2 ml-24'>
                         <div className='flex flex-col justify-start items-start w-full my-4'>
                             <p className='px-8 py-5 text-lg font-bold'>
-                                Course requirements
+                                Course Instructor
                             </p>
                             <div className='grid grid-cols-1'>
-                                <div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox  className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        You will learn how to design beautiful websites using Figma, an interface design tool used by designers at Uber, Airbnb and Microsoft.
-                                    </p>
-                                </div>
-                                <div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        You will learn how to take your designs and build them into powerful websites using Webflow, a state of the art site builder used by teams at Dell, NASA and more.
-                                    </p>
-                                </div><div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        You will learn secret tips of Freelance Web Designers and how they make great money freelancing online.
-                                    </p>
-                                </div><div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        Learn to use Python professionally, learning both Python 2 and Python 3!
-                                    </p>
-                                </div><div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        Understand how to use both the Jupyter Notebook and create .py files
-                                    </p>
-                                </div>
-                                <div className='flex justify-center items-start pl-8 pb-5'>
-                                    <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
-                                    <p className='text-xs text-gray-700 w-11/12'>
-                                        Get an understanding of how to create GUIs in the Jupyter Notebook system!
-                                    </p>
-                                </div>
+                                <CourseViewInstructorCard />
                             </div>
                         </div>
                     </div>
