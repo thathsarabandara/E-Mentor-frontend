@@ -10,9 +10,9 @@ function ReviewCardRow({ rating = 5, totalStars = 5, percentage = 80 }) {
         ))}
       </div>
 
-      <div className='flex justify-center items-center space-x-2 text-sm text-gray-700'>
+      <div className='flex flex-col justify-center items-center text-xs text-gray-700'>
         <p>{rating}</p>
-        <p>Star Rating</p>
+        <p className='text-center'>Star Rating</p>
       </div>
 
       <div className='relative h-2 w-60 sm:w-96 bg-gray-300 rounded-full overflow-hidden'>

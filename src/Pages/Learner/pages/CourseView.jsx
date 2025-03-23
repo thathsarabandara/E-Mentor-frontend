@@ -208,7 +208,7 @@ function CourseView() {
 
                     <div className='flex flex-col justify-start items-start w-full my-4'>
                         <p className='px-8 py-5 text-lg font-bold'>Who this course is for:</p>
-                        <div className='grid grid-cols-1'>
+                        <div className='grid grid-cols-1 w-full'>
 
                             <div className='flex justify-center items-start pl-8 pb-5'>
                                 <FaRightLong className='text-orange-600 text-lg mr-2' />
@@ -243,7 +243,7 @@ function CourseView() {
 
                     <div className='flex flex-col justify-start items-start w-full my-4'>
                         <p className='px-8 py-5 text-lg font-bold'>Course requirements</p>
-                        <div className='flex flex-col justify-center'>
+                        <div className='flex flex-col justify-center w-full'>
                             <div className='flex justify-center items-start pl-8 pb-5'>
                                 <IoIosCheckbox className='text-orange-600 text-lg mr-2' />
                                 <p className='text-xs text-gray-700 w-11/12'>
@@ -314,8 +314,8 @@ function CourseView() {
 
                 <section id='review'>
                     <div className='flex flex-col justify-start items-start w-full mt-4'>
-                    <p className='px-8 py-5 text-lg font-bold'>Course Rating</p>
-                    <ReviewCard rating={4.7} starData={starDataExample} />
+                        <p className='px-8 py-5 text-lg font-bold'>Course Rating</p>
+                        <ReviewCard rating={4.7} starData={starDataExample} />
                     </div>
                 </section>
             </div>
