@@ -18,8 +18,17 @@ import { VscMail } from 'react-icons/vsc'
 import { FaRightLong } from 'react-icons/fa6'
 import CourseSubSectionDropdown from '../../../Components/Learner/CourseSubSectionDropdown/CourseSubSectionDropdown'
 import CourseViewInstructorCard from '../../../Components/Learner/CourseViewInstructorCard/CourseViewInstructorCard'
+import ReviewCard from '../../../Components/Learner/ReviewCard/ReviewCard'
 
 function CourseView() {
+    const starDataExample = {
+        5: 120,
+        4: 30,
+        3: 10,
+        2: 5,
+        1: 2
+      };
+
   return (
     <div className='flex flex-col justify-start items-center font-inter min-h-screen'>
         <div className='flex flex-col justify-center items-start bg-gray-200 w-full'>
@@ -292,7 +301,14 @@ function CourseView() {
                     </div>
                 </section>
                 <section id='review'>
-                    
+                <div className='flex flex-col justify-start items-start w-full mt-2 ml-24'>
+                        <div className='flex flex-col justify-start items-start w-full my-4'>
+                            <p className='px-8 py-5 text-lg font-bold'>
+                                Course Reting
+                            </p>
+                            <ReviewCard rating={4.7} starData={starDataExample} />
+                        </div>
+                    </div>
                 </section>
             </div>
             <div className='w-3/12 px-6 border py-5 font-inter'>
