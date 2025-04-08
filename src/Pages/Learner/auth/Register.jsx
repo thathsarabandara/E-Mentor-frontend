@@ -3,6 +3,8 @@ import Input from '../../../Components/Learner/auth-input/Input'
 import image from '../../../assets/images/logo.png';
 import register from '../../../assets/images/register.png';
 import OAuthBtn from '../../../Components/Learner/O-Auth-Btn/OAuthBtn';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
     const[username , setUserName] = useState('');
@@ -16,6 +18,7 @@ function Register() {
     const[confirmPasswordError , setConfirmPasswordError] = useState('');
     const[isChecked, setIsChecked] = useState(false);
     const[checkedError, setCheckedError] = useState(false);
+    const navigate = useNavigate();
 
     const handleUsernameChange = (e) => {
         const value = e.target.value;
@@ -131,12 +134,27 @@ function Register() {
             setPasswordError('');
             setConfirmPasswordError('');
             setCheckedError('');
-            setUserName('');
-            setEmail('');
-            setPassword('');
-            setConfirmPassword('');
 
-            alert('submitted');
+            const registerData = {
+                username,
+                email,
+                password
+            }
+
+            axios.post('http://localhost:5000/auth/register', registerData , {withCredentials: true})
+            .then((response) =>{
+                console.log(response)
+                alert('Form submited successfully');
+                setUserName('');
+                setEmail('');
+                setPassword('');
+                setConfirmPassword('');
+                navigate('/verifyuser');
+            })
+            .catch((error) =>{
+                console.error(error);
+                setError('Form submition failed!')
+            })
         }
     };
     
