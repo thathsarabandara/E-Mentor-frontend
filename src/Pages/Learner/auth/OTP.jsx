@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import image from '../../../assets/images/logo.png';
+import { useNavigate } from 'react-router-dom';
 
 function OTP() {
     const [otp, setOtp] = useState(["", "", "", "", "", ""]);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [timeLeft, setTimeLeft] = useState(600);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (timeLeft > 0) {
@@ -59,14 +61,14 @@ function OTP() {
         setError("");
 
         try {
-            const response = await axios.post("https://your-api.com/verify-otp", { otp: enteredOtp });
-            if (response.data.success) {
-                alert("OTP Verified Successfully!");
+            const response = await axios.post("http://localhost:5000/auth/verifyotp", { otp: enteredOtp } , {withCredentials: true});
+            if (response.status == 200) {
+                navigate('/learner')
             } else {
                 setError("Invalid OTP, please try again.");
             }
         } catch (error) {
-            setError("Error verifying OTP. Please try again later.");
+            setError("Error verifying OTP. Please try again later." , error);
         }
 
         setLoading(false);
