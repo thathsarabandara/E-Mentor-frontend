@@ -131,7 +131,7 @@ function Login() {
                     >
                         Login ➜
                     </button>
-                    <p className='text-gray-500 text-sm m-2'>Forgot Password ? <a href='/resetpassword' className='text-blue-500 underline hover:text-orange-500'>Reset Password</a></p>
+                    <p className='text-gray-500 text-sm m-2'>Forgot Password ? <a href='/passresetrequest' className='text-blue-500 underline hover:text-orange-500'>Reset Password</a></p>
                 </form>
                 <div className='flex flex-col justify-center item-center' >
                   <div className='flex justify-center items-center m-2' >
