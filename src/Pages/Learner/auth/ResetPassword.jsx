@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token');
+  const navigate = useNavigate();
 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -61,6 +62,7 @@ const ResetPassword = () => {
         { token, password },
         { withCredentials: true }
       );
+      navigate('/login');
       setMessage('Your password has been reset successfully.');
     } catch (err) {
       setError('Reset failed. Please try again.');
