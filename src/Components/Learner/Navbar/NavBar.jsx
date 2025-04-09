@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Menu, X } from "lucide-react";
 import image from '../../../assets/images/logo.png'
 import emptyProfile from '../../../assets/images/navbar/emptyProfile.png'
@@ -9,6 +9,7 @@ import wishlist from '../../../assets/images/navbar/wishlist.png'
 import { IoNotificationsOutline, IoSearchOutline } from 'react-icons/io5';
 import { FaRegHeart } from 'react-icons/fa';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import axios from 'axios';
 
 function NavBar() {
   const [isAuth, setAuth] = useState(false);
@@ -16,6 +17,14 @@ function NavBar() {
   const [isProfile, setProfile] = useState('');
   const [isOpen, setOpen] = useState(false);
   const [cartAmount, setCartAmount] = useState('2');
+
+  useEffect(async()=>{
+    try {
+      const response = await axios.get('')
+    } catch (error) {
+      
+    }
+  },[])
   return (
     <>
       <div className='flex-col drop-shadow-md'>
