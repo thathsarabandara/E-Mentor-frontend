@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function OTP() {
     const [otp, setOtp] = useState(["", "", "", "", "", ""]);
     const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
     const [timeLeft, setTimeLeft] = useState(600);
     const navigate = useNavigate();
@@ -26,10 +27,16 @@ function OTP() {
         return `${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
     };
 
-    const handleResend = () => {
+    const handleResend = async() => {
         setTimeLeft(600);
         setOtp(["", "", "", "", "", ""]);
-        alert("New OTP sent!");
+        try {
+            const response = await axios.get("http://localhost:5000/auth/resendotp", {withCredentials: true});
+           setSuccess('OTP Resent!');
+        } catch (error) {
+            setError("Error verifying OTP. Please try again later." , error);
+        }
+
     };
 
     const handleChange = (index, e) => {
@@ -105,6 +112,7 @@ function OTP() {
                     </div>
 
                     {error && <p className='text-red-500 text-sm'>{error}</p>}
+                    {success && <p className='text-green-500 text-sm'>{success}</p>}
 
                     <p className='text-sm text-gray-500'>OTP Expires In: <span className='text-red-500 font-bold'>{formatTime(timeLeft)}</span></p>
                     <p className='text-sm text-gray-500'>Didn't receive a code?</p>
@@ -112,7 +120,6 @@ function OTP() {
                     <button 
                         onClick={handleResend} 
                         className='text-sm text-orange-500 hover:underline mt-2'
-                        disabled={timeLeft !== 0}
                     >
                         Resend Code
                     </button>
