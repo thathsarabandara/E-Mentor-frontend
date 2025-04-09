@@ -153,7 +153,7 @@ function Register() {
             })
             .catch((error) =>{
                 console.error(error);
-                setError('Form submition failed!')
+                setError('Form submition failed!', error)
             })
         }
     };

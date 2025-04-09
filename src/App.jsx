@@ -20,6 +20,8 @@ import Message from './Pages/Learner/pages/Auth/Message';
 import PurchaseHistory from './Pages/Learner/pages/Auth/PurchaseHistory';
 import Settings from './Pages/Learner/pages/Auth/Settings';
 import CourseView from './Pages/Learner/pages/CourseView';
+import PassResetRequest from './Pages/Learner/auth/PassResetRequest';
+import ResetPassword from './Pages/Learner/auth/ResetPassword';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verifyuser" element={<OTP />} />
+        <Route path="/passresetrequest" element={<PassResetRequest />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
