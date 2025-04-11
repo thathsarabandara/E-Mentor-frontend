@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Menu, X } from "lucide-react";
 import image from '../../../assets/images/logo.png'
 import emptyProfile from '../../../assets/images/navbar/emptyProfile.png'
@@ -9,13 +9,35 @@ import wishlist from '../../../assets/images/navbar/wishlist.png'
 import { IoNotificationsOutline, IoSearchOutline } from 'react-icons/io5';
 import { FaRegHeart } from 'react-icons/fa';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUserProfile } from '../../../redux/slices/userSlice';
+import { fetchCartItems } from '../../../redux/slices/cartSlice';
+import { fetchNotifications } from '../../../redux/slices/notificationSlice';
+import { fetchWishlist } from '../../../redux/slices/wishlistSlice';
 
 function NavBar() {
+  const dispatch = useDispatch();
+
   const [isAuth, setAuth] = useState(false);
   const [isNoti, setNoti] = useState(true);
   const [isProfile, setProfile] = useState('');
   const [isOpen, setOpen] = useState(false);
   const [cartAmount, setCartAmount] = useState('2');
+
+  const user = useSelector((state) => state.user);
+  const cart = useSelector((state) => state.cart);
+  const notifications = useSelector((state) => state.notifications);
+  const wishlist = useSelector((state) => state.wishlist);
+
+  useEffect(() => {
+    dispatch(fetchUserProfile());
+    dispatch(fetchCartItems());
+    dispatch(fetchNotifications());
+    dispatch(fetchWishlist());
+  }, [dispatch]);
+
+
   return (
     <>
       <div className='flex-col drop-shadow-md'>
@@ -103,9 +125,9 @@ function NavBar() {
                 </div>
               </a>
             </div>
-            {isAuth?(
+            {user.isAuthenticated?(
               <div className='m-2' >
-                {isProfile?(
+                {user.profile?(
                   <img src={isProfile} alt='user profile'/>
                 ):(
                   <img className='md:mx-3' width="30" height="30" src='https://img.icons8.com/ios-filled/50/user-male-circle.png' alt='empty_profile'/>

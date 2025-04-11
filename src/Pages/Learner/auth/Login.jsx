@@ -3,6 +3,8 @@ import Input from '../../../Components/Learner/auth-input/Input'
 import image from '../../../assets/images/logo.png';
 import login from '../../../assets/images/login.png';
 import OAuthBtn from '../../../Components/Learner/O-Auth-Btn/OAuthBtn';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const[email , setEmail] = useState('');
@@ -10,6 +12,7 @@ function Login() {
     const[error , setError] = useState('');
     const[emailError , setEmailError] = useState('');
     const[passwordError , setPasswordError] = useState('');
+    const navigate = useNavigate();
     
     const handleEmailChange = (e) => {
         const value = e.target.value;
@@ -56,30 +59,39 @@ function Login() {
     const handleAppleAuth = () => {
     };
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
+      
         setError('');
         setEmailError('');
         setPasswordError('');
-    
-        if(!password || !email){
-            setError('All Fields are Required!');
-        }else if(!validateEmail(email)) {
-            setEmailError('Please enter a valid email address');
-        }else if(!validatePassword(password)) {
-            setPasswordError('Password must be at least 8 characters, contain at least one uppercase letter, one symbol, and one number');
-        }else {
-            setError('');
-            setEmailError('');
-            setPasswordError('');
+      
+        if (!password || !email) {
+          setError('All Fields are Required!');
+        } else if (!validateEmail(email)) {
+          setEmailError('Please enter a valid email address');
+        } else if (!validatePassword(password)) {
+          setPasswordError('Password must be at least 8 characters, contain at least one uppercase letter, one symbol, and one number');
+        } else {
+          setError('');
+          setEmailError('');
+          setPasswordError('');
+      
+          try {
+            const response = await axios.post(
+              `http://localhost:5000/auth/login`, 
+              { email, password },
+              { withCredentials: true }
+            );
             setEmail('');
             setPassword('');
-
-            alert('submitted');
+            navigate('/learner')
+          } catch (error) {
+            console.log(error);
+          }
         }
-    };
-    
+      };
+      
 
   return (
     <div className='flex justify-center items-center p-16 min-h-screen'>
@@ -98,7 +110,7 @@ function Login() {
                     <h1 className='text-inter font-bold text-lg md:text-2xl text-center mb-4' >Login to Your E-Mentor Account<br />Continue Your Learning</h1>
                 </div>
                 {error && <p className='text-red-500  text-xs text-center mb-4'>{error}</p>}
-                <form className='flex flex-col justify-center items-center' onSubmit={handleSubmit}>
+                <form className='flex flex-col justify-center items-center'>
                     <Input
                         label="Email"
                         type="email"
@@ -127,6 +139,7 @@ function Login() {
                     </div>
                     <button
                         type='submit'
+                        onClick={handleSubmit}
                         className='w-48 lg:w-96 bg-orange-500 text-white rounded-sm p-2 text-sm md:text-lg font-bold hover:bg-white hover:text-orange-500 hover:border border-orange-500 transition ease-in-out'
                     >
                         Login ➜
